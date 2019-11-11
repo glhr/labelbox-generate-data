@@ -1,0 +1,6 @@
+training/input/ircam1571746625137390617.png training/color_corrected/labeled_ircam1571746625137390617.png
+training/input/ircam1571746625354059903.png training/color_corrected/labeled_ircam1571746625354059903.png
+training/input/ircam1571746627565044815.png training/color_corrected/labeled_ircam1571746627565044815.png
+training/input/ircam1571746639185956096.png training/color_corrected/labeled_ircam1571746639185956096.png
+training/input/ircam1571746651436548330.png training/color_corrected/labeled_ircam1571746651436548330.png
+training/input/ircam1571746679248053497.png training/color_corrected/labeled_ircam1571746679248053497.png
