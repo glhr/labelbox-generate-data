@@ -13,11 +13,16 @@ for path in glob.iglob('labelbox/*.json'):
         data = json.load(json_file)
         for i in range(len(data)):
             filename = data[i]['External ID']
+            orig_url = data[i]['Labeled Data']
             url = data[i]['Label']['objects'][0]['instanceURI']
             #print(url)
-            res = requests.get(url)
-            res.raise_for_status()
-            open('labelbox/'+filename, 'wb').write(res.content)
+            res_label = requests.get(url)
+            res_label.raise_for_status()
+            open('labelbox/'+filename, 'wb').write(res_label.content)
+
+            res_orig = requests.get(orig_url)
+            res_orig.raise_for_status()
+            open('input/'+filename, 'wb').write(res_orig.content)
 
             input_line = 'training/input/'+filename
             print(input_line)
