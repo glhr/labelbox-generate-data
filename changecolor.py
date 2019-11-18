@@ -8,6 +8,11 @@ import requests
 
 training = ""
 
+# ROAD_COLOR = (255,0,255) #purple
+# BACKGROUND_COLOR = (0,0,255) #red
+ROAD_COLOR = (255,255,255) #white
+BACKGROUND_COLOR = (0,0,0) #black
+
 for path in glob.iglob('labelbox/*.json'):
     with open(path) as json_file:
         data = json.load(json_file)
@@ -29,18 +34,17 @@ for path in glob.iglob('labelbox/*.json'):
                 print(input_line)
 
                 img = cv2.imread('labelbox/'+filename)
-                hsv=img
 
                 # Define lower and uppper limits of what we call "brown"
                 white=np.array([255,255,255])
 
                 # Mask image to only select white
-                mask=cv2.inRange(hsv,white,white)
+                mask=cv2.inRange(img,white,white)
                 #mask_inv = [not m for m in mask]
 
                 # Change image colors
-                img[mask==0]=(0,0,255)
-                img[mask>0]=(255,0,255)
+                img[mask==0] = BACKGROUND_COLOR
+                img[mask>0] = ROAD_COLOR
 
                 path = path.split('/')[-1]
                 cv2.imwrite('color_corrected/labeled_'+filename,img)
