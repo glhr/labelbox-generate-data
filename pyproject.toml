@@ -1,0 +1,14 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
+
+[tool]
+[tool.poetry]
+authors = ["glhr <grenblot@gmail.com>"]
+description = ""
+name = "labelbox-generate-data"
+version = "0.1.0"
+[tool.poetry.dependencies]
+opencv-python = "^4.2"
+python = "^3.7"
+[tool.poetry.dev-dependencies]
