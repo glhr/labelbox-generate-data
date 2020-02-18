@@ -9,6 +9,11 @@ Script for fetching labelled images generated on https://app.labelbox.com/
 - Fetch the labelled (and original) images from their URLs
 - Change the white/transparent mask to custom colors.
 
+**Example**
+
+Original image             |  Output
+:-------------------------:|:-------------------------:
+![original](output/images_original/cat-pet-animal-domestic-104827.jpeg) | ![color_corrected](output/images_color_corrected/cat-pet-animal-domestic-104827.jpeg)
 
 Instructions:
 1. Export Labelbox labels as JSON file.
