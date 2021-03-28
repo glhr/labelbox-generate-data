@@ -16,7 +16,7 @@ OUTPUT_COLOR_CORRECTED_FOLDER = 'output/images_color_corrected'
 OUTPUT_LABELED_FOLDER = 'output/images_labeled'
 OUTPUT_ORIGINAL_FOLDER = 'output/images_original'
 paths=[]
-
+BACKGROUND_COLOR = (0,0,0) #black
 colorsByImage = dict()# 'nameOfFile' = ['#hexColor', '#hexColor','#hexColor', ...] contains a list of n colors, n=number of objects
 
 # convert hexadecimal to RGB, and return a tuple
