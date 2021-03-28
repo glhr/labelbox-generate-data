@@ -18,7 +18,7 @@ OUTPUT_COLOR_CORRECTED_FOLDER = 'output/images_color_corrected'
 OUTPUT_LABELED_FOLDER = 'output/images_labeled'
 OUTPUT_ORIGINAL_FOLDER = 'output/images_original'
 paths=[]
-BACKGROUND_COLOR = (0,0,0) #black
+
 colorsByImage = dict()# 'nameOfFile' = ['#hexColor', '#hexColor','#hexColor', ...] contains a list of n colors, n=number of objects
 
 # convert hexadecimal to RGB, and return a tuple
@@ -59,7 +59,7 @@ for directory in [OUTPUT_COLOR_CORRECTED_FOLDER,OUTPUT_LABELED_FOLDER,OUTPUT_ORI
 
 
 
-key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJja21tOWVpc3IyMXg4MDcxNHNsZGgwdWNkIiwib3JnYW5pemF0aW9uSWQiOiJja21tOWVpczdvMWRzMDc3MjhvZmIyNWhzIiwiYXBpS2V5SWQiOiJja21yanVhb3F6emM0MDc5MDJxZzk3eWo1IiwiaWF0IjoxNjE2ODM4NDA2LCJleHAiOjIyNDc5OTA0MDZ9.RmY5u0gWbfbgPEDsc_66a7_aeraDe5gPpFpm-iVDWlU"
+key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjazJxNnpyNGNpODczMDgzODgydzBtMzI5Iiwib3JnYW5pemF0aW9uSWQiOiJjazJxNnpyM25pODZ4MDgzOHF4MnB2cW9nIiwiYXBpS2V5SWQiOiJja2psc3VjdmZoN2o4MDg5MmhxbHYxdzVyIiwiaWF0IjoxNjA5OTYwMzgxLCJleHAiOjIyNDExMTIzODF9.B-nk_NVBo_KxMKlbbf-EIh0dpY8bvVxjqFpMCBCGaUk"
 if args.fetch:
     for path in glob.iglob(os.path.join(INPUT_JSON_FOLDER,'*.json')):
         with open(path) as json_file:
