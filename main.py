@@ -109,7 +109,7 @@ printProgressBar(0, 100, prefix = 'Progress:', suffix = 'Complete', length = 50)
 for i in range(len(paths)):
     printProgressBar((i+1), len(paths), prefix = 'Progress:', suffix = 'Complete', length = 50)
     tifCounter = len(glob.glob1(str(os.path.join(OUTPUT_LABELED_FOLDER, str(paths[i]))),"*.png"))
-    filename = 'labeled_'+paths[i]+".png"
+    filename = paths[i]+'_labeled'+".png"
     input_line = os.path.join('training',OUTPUT_ORIGINAL_FOLDER, str(paths[i])+".png")
     output_line = os.path.join('training',OUTPUT_COLOR_CORRECTED_FOLDER,filename)
     aux = cv2.imread("")
